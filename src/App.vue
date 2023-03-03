@@ -3,6 +3,7 @@
   <el-icon>
     <i-ep-full-screen></i-ep-full-screen>
   </el-icon>
+  <el-button type="warning">警告</el-button>
 </template>
 
 <script setup>
