@@ -1,13 +1,16 @@
 <template>
-  <h1>个人简历</h1>
-  <el-button>123</el-button>
-  <el-icon>
-    <i-ep-chat-square></i-ep-chat-square>
-  </el-icon>
-  <el-button type="warning">警告</el-button>
+  <router-view/>
 </template>
 
 <script setup>
+import {isMobile} from "./utils/isMobile.js"
+import {useRouter} from "vue-router"
+const router = useRouter()
+if (isMobile()) {
+  router.replace("/mobile")
+} else {
+  router.replace("/")
+}
 </script>
 
 <script>
